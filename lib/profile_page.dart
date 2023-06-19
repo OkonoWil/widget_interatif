@@ -18,6 +18,7 @@ class _ProfilPageState extends State<ProfilPage> {
   bool cinema = false;
   bool lecture = false;
   bool jeux = false;
+
   @override
   void initState() {
     // TODO: implement initState
@@ -285,6 +286,62 @@ class _ProfilPageState extends State<ProfilPage> {
             child: Column(
               children: [
                 tilte('Mon langage préféré'),
+                Row(
+                  children: [
+                    Row(
+                      children: [
+                        const Text("Dart"),
+                        Radio(
+                            value: "Dart",
+                            groupValue: myProfil.favorie,
+                            onChanged: (newValue) {
+                              setState(() {
+                                myProfil.favorie = newValue!;
+                              });
+                            })
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const Text("Java"),
+                        Radio(
+                            value: "Java",
+                            groupValue: myProfil.favorie,
+                            onChanged: (newValue) {
+                              setState(() {
+                                myProfil.favorie = newValue!;
+                              });
+                            })
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const Text("JavaScript"),
+                        Radio(
+                            value: "JavaScript",
+                            groupValue: myProfil.favorie,
+                            onChanged: (newValue) {
+                              setState(() {
+                                myProfil.favorie = newValue!;
+                              });
+                            })
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        const Text("Python"),
+                        Radio(
+                            value: "Python",
+                            groupValue: myProfil.favorie,
+                            onChanged: (newValue) {
+                              setState(() {
+                                myProfil.favorie = newValue!;
+                              });
+                            })
+                      ],
+                    ),
+                  ],
+                )
               ],
             ),
           )
